@@ -1,0 +1,6 @@
+node_modules
+.vs
+.git
+site/.vs
+site/backup
+site/test.html
