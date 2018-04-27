@@ -1,0 +1,293 @@
+﻿/** ===========================
+ *  шаблоны
+ *  ===========================
+*/
+.div-margins {
+    width: 1140px;
+    margin: auto;
+}
+
+.clear::after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/** ===========================
+ *  
+ *  ===========================
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#site {
+    min-width: 230px;
+}
+
+body {
+    min-width: 230px;
+}
+
+body {
+    background: url(../images/3888-2592-33.jpg) no-repeat center center fixed;
+    background-size: auto auto;
+    background-blend-mode: color;
+}
+
+/** ===========================
+ *  h1
+ *  ===========================
+*/
+
+.h1 h1 {
+    text-align: center;
+    color: black;
+    font-size: 4.5em;
+    line-height: 0.9em;
+    font-family: Mistral;
+    font-style: italic;
+    letter-spacing: 0.2em;
+    padding: 100px 0;
+}
+
+/** ===========================
+ *  invitation
+ *  ===========================
+*/
+
+.invitation h2 {
+    text-align: center;
+    color: black;
+    font-size: 3.2em;
+}
+
+.invitation-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 0;
+}
+
+.invitation-text > div {
+    width: 35%;
+}
+
+.invitation-text h3 {
+    text-align: center;
+    color: black;
+    font-size: 2.5em;
+}
+
+.invitation-text hr {
+    width: 0.15em;
+    height: 5em;
+    background-color: black;
+}
+
+.invitation-text p {
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+}
+
+.invitation-form label {
+    text-align: center;
+    color: black;
+    font-size: 2.5em;
+    width:100%;
+}
+
+.invitation-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.invitation-form button {
+    font-size: 1em;
+    width: 9.4em;
+    height: 2.5em;
+    border-radius: 3.1em;
+    border: 1px solid;
+    border-color: black;
+    margin: 0.6em;
+    cursor: pointer;
+    background: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.invitation-form button:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+.confirm {
+    order: 1;
+}
+
+.invitation-more {
+    padding: 1.5em 0;
+    display: none;
+}
+
+.invitation-more p {
+    /*white-space: pre;*/
+    text-align:left;
+    font-size: 1.5em;
+}
+
+/** ===========================
+ *  модальное окно
+ *  ===========================
+*/
+
+.modalDialog {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.43);
+    display: none;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    display: flex;
+    pointer-events: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalDialog > div {
+    position: relative;
+    padding: 40px 20px 40px 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.44);
+}
+
+.modalDialog form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.close {
+    background: rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    right: 0;
+    top: 0;
+    line-height: 20px;
+    width: 20px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.close:hover {
+    color: #c7c7c7;
+}
+
+.modalDialog form button {
+    color: white;
+    font-size: 1em;
+    width: 9.4em;
+    height: 2.5em;
+    border-radius: 3.1em;
+    border: 1px solid;
+    border-color: white;
+    margin: 0.6em;
+    cursor: pointer;
+    background: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.modalDialog form button:hover {
+    background-color: rgba(255, 255, 255, 0.23);
+}
+
+.modalDialog input, .modalDialog textarea {
+    background: rgba(0, 0, 0, 0);
+    margin: 5px 0;
+    color: white;
+    height: 30px;
+    width: 100%;
+    padding: 4px 0 0 6px;
+}
+
+.modalDialog .name, .modalDialog .surname {
+    width: 45%;
+}
+
+.modalDialog textarea {
+    height: 100px;
+}
+
+/** ===========================
+ *  media
+ *  ===========================
+*/
+@media (min-width: 2560px) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .div-margins {
+        width: 100%;
+        padding: 0 50px;
+    }
+
+    body {
+        background-size: auto auto;
+    }
+
+    main {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .div-margins {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    body {
+        background-size: 300% auto;
+    }
+
+    main {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        background-size: 600% auto;
+    }
+
+    main {
+        font-size: 10px;
+    }
+}
