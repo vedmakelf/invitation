@@ -248,6 +248,11 @@ body {
  *  media
  *  ===========================
 */
+@font-face {
+    font-family: Marck Script; /* Гарнитура шрифта */
+    src: url(../fonts/MarckScript-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
 @media (min-width: 2560px) {
     body {
         background-size: 100% auto;
