@@ -45,11 +45,13 @@ body {
 
 .h1 h1 {
     text-align: center;
-    color: black;
+    color: transparent;
+    text-shadow: 0 0 0 black;
     font-size: 4.5em;
     line-height: 0.9em;
-    font-family: Mistral;
-    font-style: italic;
+    /*font-family: Mistral;*/
+    font-family: 'Marck Script', cursive;
+    /*font-style: italic;*/
     letter-spacing: 0.2em;
     padding: 100px 0;
 }

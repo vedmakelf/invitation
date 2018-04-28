@@ -4,7 +4,7 @@ var browserSync = require('browser-sync').create();
 
 //Задача для gulp по умолчанию: мониторить изменения в папке site, если есть изменения, выполнить build
 gulp.task('default',['browser-sync'], function () {
-    gulp.watch('site/**/*'/*, ['build']*/)
+    gulp.watch('docs/**/*'/*, ['build']*/)
     .on('change', browserSync.reload); //Refresh
 });
 
@@ -18,7 +18,7 @@ gulp.task('default',['browser-sync'], function () {
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "site"
+            baseDir: "docs"
         }
     });
 });
