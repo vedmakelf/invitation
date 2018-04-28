@@ -75,7 +75,7 @@ body {
 }
 
 .invitation-text > div {
-    width: 35%;
+    width: 300px;
 }
 
 .invitation-text h3 {
@@ -281,6 +281,16 @@ body {
 
     main {
         font-size: 12px;
+    }
+
+    .invitation-text {
+        flex-direction: column;
+    }
+
+    .invitation-text hr {
+        height: 0.15em;
+        width: 5em;
+        margin: 15px 0;
     }
 }
 
