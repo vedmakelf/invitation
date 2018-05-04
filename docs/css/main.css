@@ -75,7 +75,7 @@ body {
 }
 
 .invitation-text > div {
-    width: 300px;
+    width: 400px;
 }
 
 .invitation-text h3 {
@@ -244,14 +244,47 @@ body {
     height: 100px;
 }
 
+.modalDialog input.checkbox {
+    display: none;
+}
+
+.modalDialog label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.modalDialog label:before {
+    content: "";
+    display: block;
+    left: -0px;
+    border-color: white;
+    background-color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+}
+
+input.checkbox:checked + label:before {
+    color: black;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 900;
+    content: "\2713";
+}
+
+
 /** ===========================
  *  media
  *  ===========================
 */
-@font-face {
-    font-family: Marck Script; /* Гарнитура шрифта */
-    src: url(../fonts/MarckScript-Regular.ttf); /* Путь к файлу со шрифтом */
-}
+    @font-face {
+        font-family: Marck Script; /* Гарнитура шрифта */
+        src: url(../fonts/MarckScript-Regular.ttf); /* Путь к файлу со шрифтом */
+    }
 
 @media (min-width: 2560px) {
     body {
@@ -271,6 +304,10 @@ body {
 
     main {
         font-size: 14px;
+    }
+
+    .invitation-text > div {
+        width: 350px;
     }
 }
 
@@ -296,6 +333,10 @@ body {
         height: 0.15em;
         width: 5em;
         margin: 15px 0;
+    }
+
+    .invitation-text > div {
+        width: 300px;
     }
 }
 
