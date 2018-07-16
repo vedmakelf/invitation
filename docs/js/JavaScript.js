@@ -34,7 +34,7 @@ function confirm(data) {
   formData = new FormData($that.get(0));
   var data = {
     name: formData.get("name"),
-    username: formData.get("surname"),
+    surname: formData.get("surname"),
     email: formData.get("email"),
     comment: formData.get("comment"),
     plusOne:

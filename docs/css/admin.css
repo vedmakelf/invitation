@@ -1,0 +1,105 @@
+﻿/** ===========================
+ *  шаблоны
+ *  ===========================
+*/
+.div-margins {
+  width: 1140px;
+  margin: auto;
+}
+
+.clear::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/** ===========================
+ *  
+ *  ===========================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#site {
+  min-width: 230px;
+}
+
+body {
+  min-width: 230px;
+}
+
+body {
+  background: url(../images/3888-2592-33.jpg) no-repeat center center fixed;
+  background-size: auto auto;
+  background-blend-mode: color;
+}
+
+#table {
+  margin: 50px 0 0 0;
+  text-align: center;
+  white-space: break-word;
+  white-space: pre;
+}
+
+.cap {
+  font-weight: bold;
+}
+
+/** ===========================
+ *  media
+ *  ===========================
+*/
+@font-face {
+  font-family: Marck Script; /* Гарнитура шрифта */
+  src: url(../fonts/MarckScript-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@media (min-width: 2560px) {
+  body {
+    background-size: 100% auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .div-margins {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  body {
+    background-size: auto auto;
+  }
+
+  main {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .div-margins {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  body {
+    background-size: 300% auto;
+  }
+
+  main {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    background-size: 600% auto;
+  }
+
+  main {
+    font-size: 10px;
+  }
+}
