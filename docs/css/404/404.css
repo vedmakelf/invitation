@@ -4,7 +4,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url(/landingPage/images/404/404.jpg) no-repeat center center fixed,
+  background: url(../../images/404/404.jpg) no-repeat center center fixed,
     rgba(255, 255, 255, 0.39);
   background-blend-mode: color;
   background-size: 100% 100%;
