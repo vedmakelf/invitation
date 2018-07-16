@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html prefix="og: http://ogp.me/ns#" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -15,16 +16,21 @@
     <meta property="og:image:height" content="50" />
     <link href="css/main.css" rel="stylesheet">
     <script src="js/jquery-1.4.4.js"></script>
-    <script src="js/JavaScript.js"></script>
     <link href="css/fontAwesome.css" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+    <script src="js/JavaScript.js"></script>
+
 </head>
+
 <body>
     <main class="div-margins">
         <div class="h1">
             <h1>
-                Катюша<br />
-                &hearts;<br />
-                Ванюша
+                Катюша
+                <br /> &hearts;
+                <br />s Ванюша
             </h1>
         </div>
         <div class="invitation">
@@ -37,8 +43,8 @@
                         Когда
                     </h3>
                     <p>
-                        18 августа 2018<br />
-                        в 15:45
+                        18 августа 2018
+                        <br /> в 15:45
                     </p>
                 </div>
                 <hr color="black">
@@ -47,30 +53,26 @@
                         Где
                     </h3>
                     <p>
-                        Дворец бракосочетания № 1<br />
-                        Английская наб., 28, Санкт-Петербург,<br />
-                        Россия, 190000
+                        Дворец бракосочетания № 1
+                        <br /> Английская наб., 28, Санкт-Петербург,
+                        <br /> Россия, 190000
                     </p>
                 </div>
             </div>
             <div class="invitation-form">
                 <label>Вы придете?</label>
                 <button id="invitation-more-button">Подробнее</button>
-                <script>
-                    $("#invitation-more-button").click(function () {
-                        $(".invitation-more").slideToggle(600);
-                        $('html, body').animate({ scrollTop: $(".invitation-more").offset().top }, 600, function () { });
-                    });
-                </script>
                 <button class="confirm" onclick="window.location.href='#openModal'">Подтвердить</button>
                 <div class="invitation-more" id="invitation-more">
                     <p>
-                        Итак, забываем обо всех делах на 18.08.2018. Оставляем телефоны дома, выключаем телевизор и приходим к нам на свадебное торжество!<br />
+                        Итак, забываем обо всех делах на 18.08.2018. Оставляем телефоны дома, выключаем телевизор и приходим к нам на свадебное торжество!
                         <br />
-                        При себе иметь удобную обувь и позитивное настроение! Танцы и песни гарантированы!<br />
-                        Записываемся в очередь на торжественную регистрацию в Дворец бракосочетания № 1, которая состоится в честь нашей свадьбы.<br />
+                        <br /> При себе иметь удобную обувь и позитивное настроение! Танцы и песни гарантированы!
+                        <br /> Записываемся в очередь на торжественную регистрацию в Дворец бракосочетания № 1, которая состоится
+                        в честь нашей свадьбы.
                         <br />
-                        Ждем Вас с нетерпением!<br />
+                        <br /> Ждем Вас с нетерпением!
+                        <br />
                     </p>
                 </div>
             </div>
@@ -79,18 +81,21 @@
     <div id="openModal" class="modalDialog">
         <div>
             <button class="close fa-close" style="font-family: 'FontAwesome';" onclick="window.location.href='#close'"></button>
-            <form>
-                <input class="name" type="text" placeholder="Имя" />
-                <input class="surname" type="text" placeholder="Фамилия" />
-                <input class="email" type="email" placeholder="Emal" />
-                <input class="checkbox" type="checkbox" id="checkbox" />
+            <form method="POST" id="confirmation" onsubmit="confirm(this); return false;">
+                <input class="name" type="text" placeholder="Имя" name="name" required/>
+                <input class="surname" type="text" placeholder="Фамилия" name="surname" required/>
+                <input class="email" type="email" placeholder="Emal" name="email" />
+                <input class="checkbox" type="checkbox" id="checkbox" name="checkbox" />
                 <label for="checkbox">+1</label>
-                <input class="name hide" type="text" placeholder="Имя" />
-                <input class="surname hide" type="text" placeholder="Фамилия" />
-                <textarea placeholder="Коментарий"></textarea>
+                <div id="plusOne">
+                    <input class="name hide" type="text" placeholder="Имя" name="plusOneName" />
+                    <input class="surname hide" type="text" placeholder="Фамилия" name="plusOneSurname" />
+                </div>
+                <textarea placeholder="Коментарий" name="comment"></textarea>
                 <button>Подтвердить</button>
             </form>
         </div>
     </div>
 </body>
+
 </html>
