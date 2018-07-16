@@ -345,6 +345,27 @@ input.checkbox:checked + label:before {
   .invitation-text > div {
     width: 300px;
   }
+
+  .modalDialog form,
+  .modalDialog form > div {
+    flex-direction: column;
+    align-items: baseline;
+    width: 170px;
+  }
+
+  .modalDialog input,
+  .modalDialog textarea {
+    background: rgba(0, 0, 0, 0);
+    margin: 5px 0;
+    color: white;
+    width: 100%;
+    padding: 4px 0 0 6px;
+  }
+
+  .modalDialog .name,
+  .modalDialog .surname {
+    width: 100%;
+  }
 }
 
 @media (max-width: 425px) {
