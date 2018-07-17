@@ -30,7 +30,7 @@ onload = function(params) {
       { image: "photo/maria_latonina-1058.jpg" },
       { image: "photo/maria_latonina-1066.jpg" }
     ];
-    Galleria.loadTheme("../galleria/themes/classic/galleria.classic.min.js");
+    Galleria.loadTheme("/galleria/themes/classic/galleria.classic.min.js");
     Galleria.run(".galleria", {
       // autoplay: 5000
       // clicknext: true
