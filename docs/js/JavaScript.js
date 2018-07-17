@@ -34,9 +34,15 @@ onload = function(params) {
     Galleria.run(".galleria", {
       // autoplay: 5000
       // clicknext: true
-      dataSource: data
+      dataSource: data,
+      fullscreenDoubleTap: true
     });
   })();
+
+  // Galleria.ready(function (options) {
+
+  //   this.enterFullscreen(() => { })
+  // });
 };
 
 (function initFirebase() {
