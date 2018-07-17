@@ -35,7 +35,9 @@ onload = function(params) {
       // autoplay: 5000
       // clicknext: true
       dataSource: data,
-      fullscreenDoubleTap: true
+      fullscreenDoubleTap: true,
+      transition: "flash",
+      transitionSpeed: 700
     });
   })();
 
