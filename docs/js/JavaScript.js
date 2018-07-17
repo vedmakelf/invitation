@@ -16,13 +16,27 @@ onload = function(params) {
     }
   });
 
-  // (function galleria(params) {
-  //   Galleria.loadTheme("../galleria/themes/classic/galleria.classic.min.js");
-  //   Galleria.run(".galleria", {
-  //     // autoplay: 5000
-  //     // clicknext: true
-  //   });
-  // })();
+  $(function() {
+    var height = 1.7;
+    $(".galleria").height($(".galleria").width() / height);
+    $(window).resize(function() {
+      $(".galleria").height($(".galleria").width() / height);
+    });
+  });
+
+  (function galleria(params) {
+    var data = [
+      { image: "photo/maria_latonina-1027.jpg" },
+      { image: "photo/maria_latonina-1058.jpg" },
+      { image: "photo/maria_latonina-1066.jpg" }
+    ];
+    Galleria.loadTheme("../galleria/themes/classic/galleria.classic.min.js");
+    Galleria.run(".galleria", {
+      // autoplay: 5000
+      // clicknext: true
+      dataSource: data
+    });
+  })();
 };
 
 (function initFirebase() {
