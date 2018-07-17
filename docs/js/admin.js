@@ -34,8 +34,8 @@ onload = function(params) {
             <td>{{ email }}</td>
             <td>{{ comment }}</td>
             <td>{{ check }}</td>
-            <td>{{ plusOneName }}</td>
-            <td>{{ plusOneSurname }}</td>
+            <td>{{ plusOne.name }}</td>
+            <td>{{ plusOne.surname }}</td>
           </tr >
         {{/stooges}}
       </table>`;

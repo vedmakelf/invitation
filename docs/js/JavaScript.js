@@ -15,6 +15,14 @@ onload = function(params) {
       $("#plusOne").css("display", "none");
     }
   });
+
+  // (function galleria(params) {
+  //   Galleria.loadTheme("../galleria/themes/classic/galleria.classic.min.js");
+  //   Galleria.run(".galleria", {
+  //     // autoplay: 5000
+  //     // clicknext: true
+  //   });
+  // })();
 };
 
 (function initFirebase() {
@@ -31,7 +39,7 @@ onload = function(params) {
 
 function confirm(data) {
   var $that = $(data);
-  formData = new FormData($that.get(0));
+  var formData = new FormData($that.get(0));
   var data = {
     name: formData.get("name"),
     surname: formData.get("surname"),
@@ -42,7 +50,7 @@ function confirm(data) {
         ? false
         : {
             name: formData.get("plusOneName"),
-            username: formData.get("plusOneSurname")
+            surname: formData.get("plusOneSurname")
           }
   };
   var insertData = firebase

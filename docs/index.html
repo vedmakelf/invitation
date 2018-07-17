@@ -25,12 +25,16 @@
     <title>Приглашение</title>
 
     <link href="css/main.css" rel="stylesheet">
-    <script src="js/jquery-1.4.4.js"></script>
     <link href="css/fontAwesome.css" rel="stylesheet">
 
     <script src="js/firebase.js"></script>
 
     <script src="js/JavaScript.js"></script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/galleria-1.4.2.min.js"></script>
+
+    <script src="js/jquery-1.4.4.js"></script>
 
 </head>
 
@@ -38,9 +42,9 @@
     <main class="div-margins">
         <div class="h1">
             <h1>
-                Катюша
-                <br /> &hearts;
-                <br /> Ванюша
+                <span>Катюша</span>
+                <span>&hearts;</span>
+                <span>Ванюша</span>
             </h1>
         </div>
         <div class="invitation">
@@ -87,6 +91,10 @@
                 </div>
             </div>
         </div>
+        <!-- https://galleria.io/downloads -->
+        <!-- <div class="galleria">
+            <img src="images/3888-2592-33.jpg">
+        </div> -->
     </main>
     <div id="openModal" class="modalDialog">
         <div>
@@ -98,8 +106,8 @@
                 <input class="checkbox" type="checkbox" id="checkbox" name="checkbox" />
                 <label for="checkbox">+1</label>
                 <div id="plusOne">
-                    <input class="name hide" type="text" placeholder="Имя" name="plusOneName" />
-                    <input class="surname hide" type="text" placeholder="Фамилия" name="plusOneSurname" />
+                    <input class="name" type="text" placeholder="Имя" name="plusOneName" />
+                    <input class="surname" type="text" placeholder="Фамилия" name="plusOneSurname" />
                 </div>
                 <textarea placeholder="Коментарий" name="comment"></textarea>
                 <button>Подтвердить</button>
