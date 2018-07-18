@@ -108,8 +108,9 @@ body {
   display: inline;
 }
 
-/* .invitation-text #where > p {
-} */
+.invitation-text #where > p {
+  border-bottom: dashed #000000 1px;
+}
 .invitation-text #where:hover {
   cursor: pointer;
 }
