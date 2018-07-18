@@ -85,7 +85,7 @@
                         <span class="text" id="spanSecondText"></span>
                     </div>
                 </div>
-                <div id="where" onclick="window.location.href='#map'">
+                <div id="where" onclick="window.location.href='#mapModalDialog'">
                     <h3>
                         Где
                     </h3>
@@ -136,6 +136,16 @@
                 <textarea placeholder="Коментарий" name="comment"></textarea>
                 <button>Подтвердить</button>
             </form>
+        </div>
+    </div>
+    <div id="mapModalDialog" class="modalDialog">
+        <div id="map">
+            <button class="close fa-close" style="font-family: 'FontAwesome';" onclick="window.location.href='#close'"></button>
+            </form>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4754.301495807612!2d30.296064926222343!3d59.93317855059751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696311effa34f9f%3A0xa871a0d27dc961b4!2z0JTQstC-0YDQtdGGINCx0YDQsNC60L7RgdC-0YfQtdGC0LDQvdC40Y8g4oSWMQ!5e0!3m2!1sru!2sru!4v1531915299270"
+                    width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </body>

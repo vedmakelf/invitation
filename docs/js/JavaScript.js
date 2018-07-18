@@ -49,17 +49,6 @@ onload = function(params) {
     });
   })();
 
-  // Galleria.ready(function (options) {
-
-  //   this.enterFullscreen(() => { })
-  // });
-
-  // var c = document.getElementById("myCanvas");
-  // var ctx = c.getContext("2d");
-  // ctx.beginPath();
-  // ctx.arc(150, 100, 50, -Math.PI / 2, -Math.PI / 2 + (Math.PI * 2) / 60 * 30, false);
-  // ctx.stroke();
-
   (function() {
     var canvas = {
       day: {
@@ -113,38 +102,42 @@ onload = function(params) {
         );
         this.init();
       },
-      setTime: function(param, flag) {
+      rgba: {
+        main: `rgba(255, 255, 255, 1)`,
+        background: `rgba(255, 255, 255, 0.18)`
+      },
+      setTime: function(params) {
         this.clear();
-        this.day.number.textContent = param.days;
-        this.day.text.textContent = declOfNum(param.days, "day");
+        this.day.number.textContent = params.days;
+        this.day.text.textContent = declOfNum(params.days, "day");
         this.circleDrawing(
           this.day.ctx,
-          "rgba(255, 255, 255, 1)",
-          { sector: 365, count: 365 - param.days },
+          this.rgba.main,
+          { sector: 365, count: 365 - params.days },
           false
         );
-        this.hour.number.textContent = param.hours;
-        this.hour.text.textContent = declOfNum(param.hours, "hours");
+        this.hour.number.textContent = params.hours;
+        this.hour.text.textContent = declOfNum(params.hours, "hours");
         this.circleDrawing(
           this.hour.ctx,
-          "rgba(255, 255, 255, 1)",
-          { sector: 24, count: 24 - param.hours },
+          this.rgba.main,
+          { sector: 24, count: 24 - params.hours },
           false
         );
-        this.minute.number.textContent = param.minutes;
-        this.minute.text.textContent = declOfNum(param.minutes, "minutes");
+        this.minute.number.textContent = params.minutes;
+        this.minute.text.textContent = declOfNum(params.minutes, "minutes");
         this.circleDrawing(
           this.minute.ctx,
-          "rgba(255, 255, 255, 1)",
-          { sector: 60, count: 60 - param.minutes },
+          this.rgba.main,
+          { sector: 60, count: 60 - params.minutes },
           false
         );
-        this.second.number.textContent = param.seconds;
-        this.second.text.textContent = declOfNum(param.seconds, "seconds");
+        this.second.number.textContent = params.seconds;
+        this.second.text.textContent = declOfNum(params.seconds, "seconds");
         this.circleDrawing(
           this.second.ctx,
-          "rgba(255, 255, 255, 1)",
-          { sector: 60, count: 60 - param.seconds },
+          this.rgba.main,
+          { sector: 60, count: 60 - params.seconds },
           false
         );
       },
@@ -158,7 +151,7 @@ onload = function(params) {
           ctx.lineWidth = 5;
           obj.circleDrawing(
             ctx,
-            "rgba(255, 255, 255, 0.18)",
+            obj.rgba.background,
             { sector: 60, count: 60 },
             false
           );
@@ -260,34 +253,3 @@ function confirm(data) {
     '<p style="color: white; text-align: center; width: 100%">Подтверждение отправлено</p>'
   );
 }
-
-// function test() {
-//   var postData = {
-//     author: "asdas",
-//     uid: "asdasd"
-//   };
-//   //   var newPostKey = firebase
-//   //     .database()
-//   //     .ref()
-//   //     .child("/guests")
-//   //     .push().key;
-//   //   firebase
-//   //     .database()
-//   //     .ref("guests/X1nH66Nb4L8FTQhRXKSf")
-//   //     .set({
-//   //       username: "asdasd"
-//   //     });
-//   var insertData = firebase
-//     .database()
-//     .ref("/guests")
-//     .push(postData);
-//   console.log(insertData);
-// }
-
-// function lol(params) {
-//   //"/guests/X1nH66Nb4L8FTQhRXKSf/test"
-//   var starCountRef = firebase.database().ref("guests/");
-//   starCountRef.on("value", function(snapshot) {
-//     console.log(snapshot.val());
-//   });
-// }
