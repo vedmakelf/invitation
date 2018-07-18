@@ -80,7 +80,8 @@ body {
   padding: 3em 0;
 }
 
-.invitation-text > div {
+#when,
+#where {
   width: 400px;
 }
 
@@ -100,6 +101,42 @@ body {
   text-align: center;
   color: black;
   font-size: 1.5em;
+}
+
+.invitation-text .timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  /* border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 100%; */
+  margin: 10px;
+}
+
+.invitation-text .timer div {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+canvas {
+  position: absolute;
+  /* border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 100%; */
+}
+
+.timer .number {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.timer .text {
+  font-size: 0.8em;
 }
 
 .invitation-form label {
@@ -306,6 +343,10 @@ input.checkbox:checked + label:before {
 .galleria-theme-classic {
   background: rgba(0, 0, 0, 0);
   border-radius: 18px;
+}
+
+.galleria-theme-classic .galleria-thumbnails-container {
+  display: none;
 }
 
 /** ===========================

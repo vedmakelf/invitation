@@ -52,25 +52,46 @@
                 Приглашаем вас на церемонию бракосочетания
             </h2>
             <div class="invitation-text">
-                <div>
+                <div id="when">
                     <h3>
                         Когда
                     </h3>
-                    <p>
-                        18 августа 2018
-                        <br /> в 15:45
-                    </p>
+                    <p>18 августа 2018</p>
+                    <p>в 15:45</p>
                 </div>
-                <hr color="black">
-                <div>
+                <div class="timer">
+                    <div>
+                        <canvas id="day" width="75" height="75">
+                        </canvas>
+                        <span class="number" id="spanDay">0</span>
+                        <span class="text" id="spanDayText"></span>
+                    </div>
+                    <div>
+                        <canvas id="hour" width="75" height="75">
+                        </canvas>
+                        <span class="number" id="spanHour">0</span>
+                        <span class="text" id="spanHourText"></span>
+                    </div>
+                    <div>
+                        <canvas id="minute" width="75" height="75">
+                        </canvas>
+                        <span class="number" id="spanMinute">0</span>
+                        <span class="text" id="spanMinuteText"></span>
+                    </div>
+                    <div>
+                        <canvas id="second" width="75" height="75">
+                        </canvas>
+                        <span class="number" id="spanSecond">0</span>
+                        <span class="text" id="spanSecondText"></span>
+                    </div>
+                </div>
+                <div id="where">
                     <h3>
                         Где
                     </h3>
-                    <p>
-                        Дворец бракосочетания № 1
-                        <br /> Английская наб., 28, Санкт-Петербург,
-                        <br /> Россия, 190000
-                    </p>
+                    <p>Дворец бракосочетания № 1</p>
+                    <p>Английская наб., 28</p>
+                    <p>Санкт-Петербург, Россия, 190000</p>
                 </div>
             </div>
             <div class="invitation-form">
