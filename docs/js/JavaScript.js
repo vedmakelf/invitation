@@ -17,28 +17,34 @@ onload = function(params) {
   });
 
   $(function() {
-    var height = 1.7;
-    $(".galleria").height($(".galleria").width() / height);
+    // var height = 1.7;
+    // $(".#alleria").height($(".galleria").width() / height);
     $(window).resize(function() {
-      $(".galleria").height($(".galleria").width() / height);
+      // $(".galleria").height($(".galleria").width() / height);
       $("#map iframe").height($("#map iframe").width() / 2);
     });
   });
 
   (function galleria(params) {
-    var data = [
-      { image: "photo/maria_latonina-1027.jpg" },
-      { image: "photo/maria_latonina-1058.jpg" },
-      { image: "photo/maria_latonina-1066.jpg" }
-    ];
-    Galleria.loadTheme("galleria/themes/classic/galleria.classic.min.js");
-    Galleria.run(".galleria", {
-      autoplay: 5000,
-      // clicknext: true
-      dataSource: data,
-      fullscreenDoubleTap: true,
-      transition: "flash",
-      transitionSpeed: 500
+    // var data = [
+    //   { image: "photo/maria_latonina-1027.jpg" },
+    //   { image: "photo/maria_latonina-1058.jpg" },
+    //   { image: "photo/maria_latonina-1066.jpg" }
+    // ];
+    // Galleria.loadTheme("galleria/themes/classic/galleria.classic.min.js");
+    // Galleria.run(".galleria", {
+    //   autoplay: 5000,
+    //   // clicknext: true
+    //   dataSource: data,
+    //   fullscreenDoubleTap: true,
+    //   transition: "flash",
+    //   transitionSpeed: 500
+    // });
+    api = jQuery("#galleria").unitegallery({
+      // tile_width: 150,
+      // tile_height: 100,
+      grid_num_rows: 1,
+      gallery_width: "100%"
     });
   })();
 
