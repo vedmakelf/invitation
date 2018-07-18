@@ -83,6 +83,10 @@ body {
 #when,
 #where {
   width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .invitation-text h3 {
@@ -101,6 +105,13 @@ body {
   text-align: center;
   color: black;
   font-size: 1.5em;
+  display: inline;
+}
+
+.invitation-text #where > p {
+}
+.invitation-text #where:hover {
+  cursor: pointer;
 }
 
 .invitation-text .timer {
@@ -186,6 +197,15 @@ canvas {
   /*white-space: pre;*/
   text-align: left;
   font-size: 1.5em;
+}
+
+/*
+  карта
+*/
+
+#map {
+  width: 100%;
+  margin: 50px 0;
 }
 
 /** ===========================

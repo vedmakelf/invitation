@@ -24,6 +24,14 @@ onload = function(params) {
     });
   });
 
+  $(function() {
+    var height = 2;
+    $("#map iframe").height($("#map iframe").width() / height);
+    $(window).resize(function() {
+      $("#map iframe").height($("#map iframe").width() / height);
+    });
+  });
+
   (function galleria(params) {
     var data = [
       { image: "photo/maria_latonina-1027.jpg" },
