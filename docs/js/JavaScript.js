@@ -21,14 +21,7 @@ onload = function(params) {
     $(".galleria").height($(".galleria").width() / height);
     $(window).resize(function() {
       $(".galleria").height($(".galleria").width() / height);
-    });
-  });
-
-  $(function() {
-    var height = 2;
-    $("#map iframe").height($("#map iframe").width() / height);
-    $(window).resize(function() {
-      $("#map iframe").height($("#map iframe").width() / height);
+      $("#map iframe").height($("#map iframe").width() / 2);
     });
   });
 
@@ -252,4 +245,9 @@ function confirm(data) {
   $that.html(
     '<p style="color: white; text-align: center; width: 100%">Подтверждение отправлено</p>'
   );
+}
+
+function map() {
+  window.location.href = "#mapModalDialog";
+  $("#map iframe").height($("#map iframe").width() / 2);
 }
