@@ -395,7 +395,13 @@ input.checkbox:checked + label:before {
     font-size: 14px;
   }
 
-  .invitation-text > div {
+  .invitation-text {
+    flex-direction: column;
+  }
+
+  #when,
+  #where,
+  #timer {
     width: 350px;
   }
 }
@@ -414,17 +420,15 @@ input.checkbox:checked + label:before {
     font-size: 12px;
   }
 
-  .invitation-text {
-    flex-direction: column;
-  }
-
   .invitation-text hr {
     height: 0.15em;
     width: 5em;
     margin: 15px 0;
   }
 
-  .invitation-text > div {
+  #when,
+  #where,
+  #timer {
     width: 300px;
   }
 
@@ -457,5 +461,20 @@ input.checkbox:checked + label:before {
 
   main {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 319px) {
+  main {
+    font-size: 9px;
+  }
+
+  #when,
+  #where,
+  #timer {
+    width: 250px;
+  }
+  #timer {
+    flex-direction: column;
   }
 }
