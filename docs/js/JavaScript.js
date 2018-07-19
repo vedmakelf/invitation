@@ -21,7 +21,7 @@ onload = function(params) {
     // $(".#alleria").height($(".galleria").width() / height);
     $(window).resize(function() {
       // $(".galleria").height($(".galleria").width() / height);
-      $("#map iframe").height($("#map iframe").width() / 2);
+      $("#map iframe").height($("#map iframe").width() / 2.3);
     });
   });
 
@@ -255,5 +255,5 @@ function confirm(data) {
 
 function map() {
   window.location.href = "#mapModalDialog";
-  $("#map iframe").height($("#map iframe").width() / 2);
+  $("#map iframe").height($("#map iframe").width() / 2.3);
 }
