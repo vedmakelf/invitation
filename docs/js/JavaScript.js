@@ -41,8 +41,8 @@ onload = function(params) {
     //   transitionSpeed: 500
     // });
     api = jQuery("#galleria").unitegallery({
-      tile_width: 125,
-      tile_height: 100,
+      tile_width: 200,
+      tile_height: 150,
       grid_num_rows: 1,
       gallery_width: "100%"
     });
