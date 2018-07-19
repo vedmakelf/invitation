@@ -1,27 +1,27 @@
 onload = function(params) {
-  $("#invitation-more-button").click(function() {
-    $(".invitation-more").slideToggle(500);
-    // $("html, body").animate(
-    //   { scrollTop: $(".invitation-more").offset().top },
+  jQuery144("#invitation-more-button").click(function() {
+    jQuery144(".invitation-more").slideToggle(500);
+    // jQuery144("html, body").animate(
+    //   { scrollTop: jQuery144(".invitation-more").offset().top },
     //   600,
     //   function() {}
     // );
   });
 
-  $("#checkbox").change(() => {
-    if ($("#checkbox").attr("checked")) {
-      $("#plusOne").css("display", "flex");
+  jQuery144("#checkbox").change(() => {
+    if (jQuery144("#checkbox").attr("checked")) {
+      jQuery144("#plusOne").css("display", "flex");
     } else {
-      $("#plusOne").css("display", "none");
+      jQuery144("#plusOne").css("display", "none");
     }
   });
 
-  $(function() {
+  jQuery144(function() {
     // var height = 1.7;
-    // $(".#alleria").height($(".galleria").width() / height);
-    $(window).resize(function() {
-      // $(".galleria").height($(".galleria").width() / height);
-      $("#map iframe").height($("#map iframe").width() / 2.3);
+    // jQuery144(".#alleria").height(jQuery144(".galleria").width() / height);
+    jQuery144(window).resize(function() {
+      // jQuery144(".galleria").height(jQuery144(".galleria").width() / height);
+      jQuery144("#map iframe").height(jQuery144("#map iframe").width() / 2.3);
     });
   });
 
@@ -40,7 +40,7 @@ onload = function(params) {
     //   transition: "flash",
     //   transitionSpeed: 500
     // });
-    api = jQuery("#galleria").unitegallery({
+    api = jQueryMin("#galleria").unitegallery({
       tile_width: 200,
       tile_height: 150,
       grid_num_rows: 1,
@@ -229,8 +229,8 @@ onload = function(params) {
 })();
 
 function confirm(data) {
-  var $that = $(data);
-  var formData = new FormData($that.get(0));
+  var jQuery144that = jQuery144(data);
+  var formData = new FormData(jQuery144that.get(0));
   var data = {
     name: formData.get("name"),
     surname: formData.get("surname"),
@@ -248,12 +248,12 @@ function confirm(data) {
     .database()
     .ref("/guests")
     .push(data);
-  $that.html(
+  jQuery144that.html(
     '<p style="color: white; text-align: center; width: 100%">Подтверждение отправлено</p>'
   );
 }
 
 function map() {
   window.location.href = "#mapModalDialog";
-  $("#map iframe").height($("#map iframe").width() / 2.3);
+  jQuery144("#map iframe").height(jQuery144("#map iframe").width() / 2.3);
 }
