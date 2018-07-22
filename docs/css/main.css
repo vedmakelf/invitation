@@ -36,6 +36,7 @@ body {
   background: url(../images/3888-2592-33.jpg) no-repeat center center fixed;
   background-size: auto auto;
   background-blend-mode: color;
+  font-family: "Marck Script", cursive;
 }
 
 /** ===========================
@@ -179,6 +180,7 @@ canvas {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  font-family: "Marck Script", cursive;
 }
 
 .invitation-form button:hover {
@@ -192,12 +194,40 @@ canvas {
 .invitation-more {
   padding: 1.5em 0;
   display: none;
+  width: 100%;
+  flex-direction: column;
+  /* font-family: "Marck Script", cursive; */
+}
+
+#text{
+  margin-bottom: 10px;
+}
+
+#schedule{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .invitation-more p {
   /*white-space: pre;*/
   text-align: left;
+  font-size: 1.7em;
+}
+
+.invitation-more ul {
+  /* text-align: left; */
   font-size: 1.5em;
+}
+
+.invitation-more li {
+  /* text-align: left; */
+  margin-left: 25px;
+}
+
+#schedule div{
+  width: 48%;
+  margin: 5px 0;
 }
 
 /*
@@ -206,6 +236,38 @@ canvas {
 
 #map {
   width: 1024px;
+}
+
+#instagram{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 50px 0;
+}
+
+#instagram h3{
+  font-size: 2em;
+  color: black;
+  background: url(../images/Novel_icon-icons.com_54157.svg) left center no-repeat;
+  padding: 30px 100px 35px 110px;
+  display: inline-block;
+  margin-top: 0;
+}
+
+#instagram-tag{
+  font-family: initial;
+}
+
+#instagram-tag a{
+  color: black;
+}
+
+#instagram-tag a:active{
+  color: black;
+}
+
+#instagram-tag a:visited{
+  color: black;
 }
 
 /** ===========================
@@ -224,6 +286,7 @@ canvas {
   display: none;
   pointer-events: none;
   z-index: 999999;
+  font-family: initial;
 }
 
 .modalDialog:target {
@@ -397,6 +460,25 @@ input.checkbox:checked + label:before {
 
   .invitation-text {
     flex-direction: column;
+  }
+
+  #schedule {
+    flex-direction: column;
+  }
+
+  #schedule div {
+    width: 100%;
+  }
+
+  #schedule hr {
+    /* display: none; */
+    background-image: url(../images/pic-story-h2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
   }
 
   #when,

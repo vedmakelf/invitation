@@ -1,6 +1,7 @@
 onload = function(params) {
   jQuery144("#invitation-more-button").click(function() {
-    jQuery144(".invitation-more").slideToggle(500);
+    jQuery144("#invitation-more").slideToggle(500);
+    jQuery144("#invitation-more").css("display", "flex");
     // jQuery144("html, body").animate(
     //   { scrollTop: jQuery144(".invitation-more").offset().top },
     //   600,
