@@ -37,6 +37,8 @@ body {
   background-size: auto auto;
   background-blend-mode: color;
   font-family: "Marck Script", cursive;
+  height: 100vh;
+  width: 100%;
 }
 
 /** ===========================
