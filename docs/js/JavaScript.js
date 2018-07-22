@@ -1,4 +1,4 @@
-onload = function(params) {
+var load = function(params) {
   jQuery144("#invitation-more-button").click(function() {
     jQuery144("#invitation-more").slideToggle(500);
     jQuery144("#invitation-more").css("display", "flex");
