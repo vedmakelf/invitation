@@ -504,8 +504,7 @@ input.checkbox:checked + label:before {
   }
 
   body {
-    /* background-size: 300% auto; */
-    background-size: 100% 100%;
+    background-size: 300% auto;
   }
 
   main {
@@ -548,8 +547,7 @@ input.checkbox:checked + label:before {
 
 @media (max-width: 425px) {
   body {
-    /* background-size: 600% auto; */
-    background-size: 100% 100%;
+    background-size: 600% auto;
   }
 
   main {
