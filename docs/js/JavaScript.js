@@ -180,7 +180,7 @@ var load = function(params) {
     };
     canvas.init();
     (function go() {
-      var date = getTimeRemaining("2018.08.18 15:45:00");
+      var date = getTimeRemaining("2018-08-18 15:45:00");
       canvas.setTime(date);
       setTimeout(go, 1000);
     })();
