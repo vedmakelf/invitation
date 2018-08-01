@@ -250,10 +250,15 @@ function confirm(data) {
   var insertData = firebase
     .database()
     .ref("/guests")
-    .push(data);
-  jQuery144that.html(
-    '<p style="color: white; text-align: center; width: 100%">Подтверждение отправлено</p>'
-  );
+    .push(data, err => {
+      if (!err) {
+        jQuery144that.html(
+          '<p style="color: white; text-align: center; width: 100%">Подтверждение отправлено</p>'
+        );
+      } else {
+        ('<p style="color: white; text-align: center; width: 100%">Произошла ошибка, перезагрузите страницу и повторите попытку</p>');
+      }
+    });
 }
 
 function map() {
