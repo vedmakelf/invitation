@@ -201,11 +201,11 @@ canvas {
   /* font-family: "Marck Script", cursive; */
 }
 
-#text{
+#text {
   margin-bottom: 10px;
 }
 
-#schedule{
+#schedule {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -227,7 +227,7 @@ canvas {
   margin-left: 25px;
 }
 
-#schedule div{
+#schedule div {
   width: 48%;
   margin: 5px 0;
 }
@@ -240,7 +240,27 @@ canvas {
   width: 1024px;
 }
 
-#instagram{
+#photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 50px 0;
+  font-size: 2em;
+}
+
+#photo a {
+  color: black;
+}
+
+#photo a:active {
+  color: black;
+}
+
+#photo a:visited {
+  color: black;
+}
+
+#instagram {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,10 +268,11 @@ canvas {
   width: 100%;
 }
 
-#instagram > div{
+#instagram > div {
   font-size: 2em;
   color: black;
-  background: url(../images/Novel_icon-icons.com_54157.svg) left center no-repeat;
+  background: url(../images/Novel_icon-icons.com_54157.svg) left center
+    no-repeat;
   padding: 0 0 0 50px;
   display: inline-block;
   margin-top: 0;
@@ -261,23 +282,23 @@ canvas {
   align-items: center;
 }
 
-#instagram-tag{
-  font-family: 'Times New Roman', Times, serif;
+#instagram-tag {
+  font-family: "Times New Roman", Times, serif;
 }
 
-#instagram-tag a{
+#instagram-tag a {
   color: black;
 }
 
-#instagram-tag a:active{
+#instagram-tag a:active {
   color: black;
 }
 
-#instagram-tag a:visited{
+#instagram-tag a:visited {
   color: black;
 }
 
-.instagram{
+.instagram {
   padding: 5px;
 }
 
@@ -558,7 +579,7 @@ input.checkbox:checked + label:before {
 }
 
 @media (max-width: 374px) {
-  #instagram > div{
+  #instagram > div {
     flex-direction: column;
   }
 }

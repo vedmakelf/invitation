@@ -182,6 +182,16 @@ var load = function(params) {
     (function go() {
       // 2018-08-18 15:45:00
       var date = getTimeRemaining(new Date(2018, 08 - 1, 18, 15, 45, 00));
+      if (date.total < 0) {
+        canvas.setTime({
+          total: 0,
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        });
+        return;
+      }
       canvas.setTime(date);
       setTimeout(go, 1000);
     })();
